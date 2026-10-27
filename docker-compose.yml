@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  dashboard-cd:
+    build: .
+    container_name: projeto-cd1-flask
+    ports:
+      - "5000:5000" # Mapeia a porta 5000 do seu servidor para a porta 5000 do container
+    environment:
+      - FLASK_ENV=production
+    restart: unless-stopped
