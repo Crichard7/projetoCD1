@@ -5,7 +5,7 @@ services:
     build: .
     container_name: projeto-cd1-flask
     ports:
-      - "5000:5000" # Mapeia a porta 5000 do seu servidor para a porta 5000 do container
+      - "80:5000" # Mapeia a porta 5000 do seu servidor para a porta 5000 do container
     environment:
       - FLASK_ENV=production
     restart: unless-stopped
